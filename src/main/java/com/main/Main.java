@@ -1,8 +1,7 @@
-package main;
+package com.main;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.mail.MailProperties;
 
 @SpringBootApplication
 public class Main {

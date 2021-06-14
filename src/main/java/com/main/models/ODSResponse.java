@@ -1,20 +1,21 @@
-package models;
+package com.main.models;
 
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
+import java.util.List;
 
 @Component
 public class ODSResponse {
 
     private ODSHeader header;
-    private HashMap body;
+    private List<HashMap> body;
 
     public ODSResponse() {
         header = new ODSHeader();
     }
 
-    public ODSResponse(HashMap body) {
+    public ODSResponse(List<HashMap> body) {
         header = new ODSHeader();
         this.body = body;
     }
@@ -27,11 +28,11 @@ public class ODSResponse {
         this.header = header;
     }
 
-    public HashMap getBody() {
-        return new HashMap(this.body);
+    public List<HashMap> getBody() {
+        return body;
     }
 
-    public void setBody(HashMap body) {
+    public void setBody(List<HashMap> body) {
         this.body = body;
     }
 }
