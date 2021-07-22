@@ -1,7 +1,7 @@
 package com.main;
 
 import com.main.DAOs.DataDAO;
-import com.main.models.ODSResponse;
+import com.main.mod.ODSResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,6 @@ import org.springframework.http.ResponseEntity;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.concurrent.Executors;
 
 @org.springframework.stereotype.Service
 public class Service {

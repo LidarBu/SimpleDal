@@ -6,15 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="DalTemplate" />
+        <module name="DalPattern" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="DalPattern" target="11" />
       <module name="DalTemplate" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="DalPattern" options="-parameters" />
       <module name="DalTemplate" options="-parameters" />
     </option>
   </component>

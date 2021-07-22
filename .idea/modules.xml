@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DalTemplate.iml" filepath="$PROJECT_DIR$/DalTemplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DalPattern.iml" filepath="$PROJECT_DIR$/DalPattern.iml" />
     </modules>
   </component>
 </project>

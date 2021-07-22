@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -25,6 +26,8 @@ public class DataDAO {
     @Value("${ods.getdata.defaultquery}")
     private String defaultQuery;
 
+
+
     private Logger logger = LoggerFactory.getLogger(DataDAO.class);
 
     public DataDAO() {
@@ -36,12 +39,13 @@ public class DataDAO {
     }
 
     public List<HashMap> getData(Object[] params) {
-        for(Object object : params)
-            logger.info("resquest parammmmmmmmmmmmmmmmmssssssssssss" + object.toString());
-        List<HashMap> response = jdbcTemplate.query(query,new HashMapMapper(), params);
+        for (Object object : params)
+            logger.info("resquest param" + object.toString());
+        List<HashMap> response = jdbcTemplate.query(query, new HashMapMapper(), params);
         return response;
 
     }
+
 
 
     public JdbcTemplate getJdbcTemplate() {

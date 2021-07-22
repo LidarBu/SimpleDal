@@ -10,3 +10,10 @@ CREATE TABLE customers (
 INSERT INTO customers (first_name, last_name, phone) VALUES
   ('Moshe', 'Elk', '12345'),
   ('Nati', 'Ash', '12345');
+
+
+  [
+    {"NAP_STREET_ID":123,"NAP_FONETIC":"ANAVIM","NAP_STREET_NAME":"ANAVIM","NAP_CITY_ID":"1"},
+    {"NAP_STREET_ID":12,"NAP_FONETIC":"ANAVIM","NAP_STREET_NAME":"ANAVIASDASM","NAP_CITY_ID":"1"},
+    {"NAP_STREET_ID":12,"NAP_FONETIC":"ANAVIM","NAP_STREET_NAME":"ANAVIASDASM","NAP_CITY_ID":"1"}
+    ]
