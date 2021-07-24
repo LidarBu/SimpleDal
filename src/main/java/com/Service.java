@@ -25,6 +25,21 @@ public class Service {
         try { //check if the params empty or not.
             int len = params.length;
             logger.info("Request with params received");
+            //duplicate each param for the query structure
+            Object[] temp = new Object[len*2];
+            int j = 0;
+            for(int i=0 ; i<len;i++){
+               if(params[i].equals("")) {
+                   temp[j] = null;
+                   temp[j + 1] = null;
+                   j= j+2;
+               }else{
+                   temp[j] = params[i];
+                   temp[j+1] = params[i];
+               }
+            }
+            params=temp;
+
             try {//in case the params are not empty the execute request with params
                 List<HashMap> body = dataDAO.getData(params);
                 ODSResponse response = new ODSResponse(body);

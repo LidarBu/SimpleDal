@@ -37,8 +37,8 @@ public class DataDAO {
     }
 
     public List<HashMap> getData(Object[] params) {
-        for (Object object : params)
-            logger.info("resquest param" + object.toString());
+//        for (Object object : params)
+//            logger.info("request param" + object.toString());
         List<HashMap> response = jdbcTemplate.query(query, new HashMapMapper(), params);
         return response;
 
