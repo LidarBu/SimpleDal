@@ -10,8 +10,7 @@ CREATE TABLE CITIES (NAP_CITY_ID VARCHAR(4),
                                          MT_POST_CITY_ID NUMBER(6) ,
                                          MT_PRV_CITY_NAME  VARCHAR(50),
                                          MT_POST_UPD_DATE DATE,
-                                         NAP_PARENT_CITY_ID VARCHAR(4),
-                                         RB_AUDIT_SBR SBREC            );
+                                         NAP_PARENT_CITY_ID VARCHAR(4) );
 
 
 
@@ -19,7 +18,7 @@ CREATE TABLE CITIES (NAP_CITY_ID VARCHAR(4),
 
 
 
-DROP TABLE STREETS IF EXITS;
+DROP TABLE STREETS IF EXISTS;
 CREATE TABLE STREETS (NAP_CITY_ID VARCHAR(4),
                                               NAP_STREET_ID NUMBER(4),
                                               NAP_STREET_NAME VARCHAR(17),
@@ -32,7 +31,7 @@ CREATE TABLE STREETS (NAP_CITY_ID VARCHAR(4),
                                               MT_POST_STREET_NUM NUMBER(6),
                                               MT_PRV_STREET_NAME VARCHAR(20),
                                               MT_POST_UPD_DATE DATE,
-                                              ROW_LASTMANT_DDTM DATETIME)
+                                              ROW_LASTMANT_DDTM DATETIME);
 
 
 
@@ -41,7 +40,7 @@ DELETE  FROM  STREETS WHERE  NAP_CITY_ID =  1  ;
 INSERT INTO STREETS VALUES  ('1',123,'ANAVIM', 'ANAVIM','ANAVIM','A42A','ANV','a',123456,123455,'STREETS PREVIOUS',CURRENT_DATE,CURRENT_TIME);
 
 INSERT INTO CITIES VALUES  ('1',3,2, 'ANAVIM','ANAVIM',123,445,1,1234,'CITY PREVIOUS',CURRENT_DATE,'PRNT');
-SELECT * FROM CITIES
+SELECT * FROM CITIES;
 
 
 SELECT CITIES.NAP_CITY_ID, CITIES.NAP_FONETIC, STREETS.NAP_STREET_NAME , STREETS.NAP_STREET_ID  FROM CITIES LEFT JOIN STREETS  ON  CITIES.NAP_CITY_ID = STREETS.NAP_CITY_ID;
