@@ -17,7 +17,14 @@ public class HashMapMapper implements RowMapper<HashMap> {
         int columnsNum = metaData.getColumnCount();
 
         for (int column = 1; column <= columnsNum; column++) {
-            map.put(metaData.getColumnName(column), resultSet.getObject(column));
+
+            Object value = resultSet.getObject(column);
+
+            if (value instanceof String) {
+                ((String) value).trim();
+            }
+
+            map.put(metaData.getColumnName(column), value);
 
         }
         return map;
